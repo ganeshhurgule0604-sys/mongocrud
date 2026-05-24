@@ -5,6 +5,7 @@ import {ConfigModule, ConfigService} from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UserModule } from './user/user.module';
 import { PostModule } from './post/post.module';
+import { TaskModule } from './task/task.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -17,7 +18,8 @@ import { PostModule } from './post/post.module';
       })
     }),
     UserModule,
-    PostModule
+    PostModule,
+    TaskModule
   ],
   controllers: [AppController],
   providers: [AppService],
